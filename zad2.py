@@ -4,9 +4,9 @@ img = cv2.imread('img.jpg')
 
 print(img.shape)
 
-wycinek = img[0:100, 0:100]
+dol = img[img.shape[0]//2:, :]
+gora = img[0:img.shape[0]//2, :]
 
-cv2.imshow("wycinek",wycinek)
+cv2.imshow("dol",dol)
 cv2.imshow("zdjecie",img)
-print(wycinek)
 cv2.waitKey()

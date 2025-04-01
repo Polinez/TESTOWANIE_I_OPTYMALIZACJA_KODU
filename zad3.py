@@ -4,9 +4,9 @@ img = cv2.imread('img.jpg')
 
 print(img.shape)
 
-wycinek = img[0:100, 0:100]
+prawo = img[:, img.shape[1]//2:]
+lewo = img[:, :img.shape[1]//2]
 
-cv2.imshow("wycinek",wycinek)
+cv2.imshow("prawo",prawo)
 cv2.imshow("zdjecie",img)
-print(wycinek)
 cv2.waitKey()
