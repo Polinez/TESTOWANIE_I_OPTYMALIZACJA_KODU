@@ -2,14 +2,10 @@ import cv2
 import numpy as np
 image = cv2.imread('pingwin.jpg')
 
-M= np.ones(image.shape, dtype="uint8") +50
-added = cv2.add(image, M)
+
+added = cv2.add(image, np.array([10,-20,30]))
 
 cv2.imshow('Original Image', image)
 cv2.imshow('Added Image', added)
-
-addedNP = image + M
-
-cv2.imshow('Added Image with Numpy', addedNP)
 
 cv2.waitKey(0)
